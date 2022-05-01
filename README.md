@@ -65,5 +65,6 @@ scale(65535);
 scale(0);
 255 // the lowest value becomes the highest because flip was set to true
 
-scale(32767), 128);
+scale(32767)
+128 // rounded result
 ```
