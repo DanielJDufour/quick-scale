@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Create a Fast Linear Scaling Function. CPU Optimized. Reversible. Rounding.",
   "main": "./quick-scale.js",
+  "files": [
+    "quick-scale.js"
+  ],
   "scripts": {
     "format": "npx prettier --arrow-parens=avoid --print-width=240 --trailing-comma=none --write *.js",
     "test": "node test.js"
