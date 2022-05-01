@@ -1,6 +1,6 @@
 {
   "name": "quick-scale",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create a Fast Linear Scaling Function. CPU Optimized. Reversible. Rounding.",
   "main": "./quick-scale.js",
   "files": [
