@@ -4,7 +4,7 @@
 ### features
 - CPU Optimized
 - Reversible
-- Round Output
+- Rounding
 
 ### install
 ```bash
