@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/flug"></script>
+    <script src="./quick-scale.js"></script>
+    <script>
+      window.require = function (name) {
+        if (name.includes("flug")) return test;
+        else if (name.includes("quick-scale")) return quickScale;
+      };
+    </script>
+    <script src="./test.js" type="module"></script>
+  </head>
+</html>

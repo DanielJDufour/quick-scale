@@ -1,5 +1,5 @@
-import test from "flug";
-import { _identity, _scale, _scale_number, _scale_and_flip_number, _scale_and_flip_and_round_number, _scale_and_round_number, createScaleFunction } from "./quick-scale.js";
+const test = require("flug");
+const { _identity, _scale, _scale_number, _scale_and_flip_number, _scale_and_flip_and_round_number, _scale_and_round_number, createScaleFunction } = require("./quick-scale.js");
 
 const OLD_MIN_MAX = [900, 12633];
 const [OLD_MIN, OLD_MAX] = OLD_MIN_MAX;

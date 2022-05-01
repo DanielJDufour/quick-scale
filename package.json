@@ -10,7 +10,6 @@
     "format": "npx prettier --arrow-parens=avoid --print-width=240 --trailing-comma=none --write *.js",
     "test": "node test.js"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DanielJDufour/quick-scale.git"

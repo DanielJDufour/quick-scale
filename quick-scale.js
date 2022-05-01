@@ -1,25 +1,27 @@
-export function _identity(n) {
+// to-do: provide offsets, so evenly distributed when rounding
+
+function _identity(n) {
   return n;
 }
 
-export function _scale_number(old_min, old_range, new_min, new_range, n) {
+function _scale_number(old_min, old_range, new_min, new_range, n) {
   return new_min + (new_range * (n - old_min)) / old_range;
 }
 
-export function _scale_and_flip_number(old_min, old_range, new_max, new_range, n) {
+function _scale_and_flip_number(old_min, old_range, new_max, new_range, n) {
   return new_max - (new_range * (n - old_min)) / old_range;
 }
 
-export function _scale_and_round_number(old_min, old_range, new_min, new_range, n) {
+function _scale_and_round_number(old_min, old_range, new_min, new_range, n) {
   return Math.round(new_min + (new_range * (n - old_min)) / old_range);
 }
 
-export function _scale_and_flip_and_round_number(old_min, old_range, new_max, new_range, n) {
+function _scale_and_flip_and_round_number(old_min, old_range, new_max, new_range, n) {
   return Math.round(new_max - (new_range * (n - old_min)) / old_range);
 }
 
 // assuming not no data
-export function createScaleFunction([old_min, old_max], [new_min, new_max], { flip, no_range_value, no_range_value_strategy = "highest", round = false } = {}) {
+function createScaleFunction([old_min, old_max], [new_min, new_max], { flip, no_range_value, no_range_value_strategy = "highest", round = false } = {}) {
   const old_range = old_max - old_min;
   const new_range = new_max - new_min;
 
@@ -52,6 +54,24 @@ export function createScaleFunction([old_min, old_max], [new_min, new_max], { fl
   }
 }
 
-export function _scale(pixel, ...rest) {
+function _scale(pixel, ...rest) {
   return create(rest)(pixel);
 }
+
+const quickScale = {
+  _identity,
+  _scale,
+  _scale_number,
+  _scale_and_flip_number,
+  _scale_and_round_number,
+  _scale_and_flip_and_round_number,
+  createScaleFunction
+};
+
+if (typeof define === "object")
+  define(function () {
+    return quickScale;
+  });
+if (typeof module === "object") module.exports = quickScale;
+if (typeof window === "object") window.quickScale = quickScale;
+if (typeof self === "object") self.quickScale = quickScale;
