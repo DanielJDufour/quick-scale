@@ -6,6 +6,10 @@
 - Reversible
 - Rounding
 
+### why
+There's a lot of [alternatives](#alternatives), but I believe quick-scale provides a mix of features not found together in another package,
+including the ability to simply reverse the scale and define a strategy for when the range is zero.
+
 ### install
 ```bash
 npm install quick-scale
@@ -68,3 +72,9 @@ scale(0);
 scale(32767);
 128 // rounded result
 ```
+
+### alternatives
+- https://github.com/d3/d3-scale
+- https://github.com/AoDev/scale-number
+- https://github.com/javiercejudo/rescale-util
+- https://github.com/javiercejudo/linear-converter
