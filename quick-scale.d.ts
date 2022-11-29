@@ -1,8 +1,8 @@
 export type NoRangeValueStrategy = "highest" | "middle" | "lowest";
 
 export declare function createScaleFunction(
-  [old_min, old_max]: [number, number],
-  [new_min, new_max]: [number, number],
+  [old_min, old_max]: [number, number] | Readonly<[number, number]>,
+  [new_min, new_max]: [number, number] | Readonly<[number, number]>,
   options?: {
     flip?: boolean;
     no_range_value?: number;
