@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/DanielJDufour/quick-scale/issues"
   },
-  "homepage": "https://github.com/DanielJDufour/quick-scale#readme"
+  "homepage": "https://github.com/DanielJDufour/quick-scale#readme",
+  "devDependencies": {
+    "flug": "^2.3.1"
+  }
 }
